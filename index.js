@@ -29,7 +29,7 @@ console.log(year);
 function multi(a, b) {
 	return a * b;
 }
-console.log(multi(2, 78));
+multi(2, 78);
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
@@ -81,11 +81,46 @@ function dogFeeder(dogWeight, dogAge) {
 dogFeeder(15, 1);
 
 /************************************************************** Task 4 **************************************************************/
-// Rock, Paper, Sissors
-// Your function should take a string (either rock paper or sissors)
+// Rock, Paper, Scissors
+// Your function should take a string (either rock paper or scissors)
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
+
+const choices = ['rock', 'paper', 'scissors'];
+let cpuChoice = Math.floor(Math.random() * 3);
+let playerChoice = 'paper';
+
+function cpu(cpuChoice) {
+	if (cpuChoice === 0) {
+		return choices[0];
+	} else if (cpuChoice === 1) {
+		return choices[1];
+	} else {
+		return choices[2];
+	}
+}
+cpu(cpuChoice);
+
+function rpsGame(playerChoice) {
+	if (playerChoice === 'scissors' && cpu(cpuChoice) === 'rock') {
+		return 'You Lose!';
+	} else if (playerChoice === 'rock' && cpu(cpuChoice) === 'scissors') {
+		return 'You Win!';
+	} else if (playerChoice === 'paper' && cpu(cpuChoice) === 'rock') {
+		return 'You Win!';
+	} else if (playerChoice === 'scissors' && cpu(cpuChoice) === 'paper') {
+		return 'You Win!';
+	} else if (playerChoice === 'rock' && cpu(cpuChoice) === 'paper') {
+		return 'You Lose!';
+	} else if (playerChoice === 'paper' && cpu(cpuChoice) === 'scissors') {
+		return 'You Lose!';
+	} else {
+		return 'Tie';
+	}
+}
+
+rpsGame(playerChoice);
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
@@ -100,7 +135,7 @@ dogFeeder(15, 1);
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
-//write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
+//write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade
 //90s should be A
 //80s should be B
 //70s should be Cs
@@ -119,9 +154,9 @@ gradeCalc();
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traning kit on arrays
+// Hint - you may need to study tomorrow's training kit on arrays
 // try looking up the .includes() method
 
 /************************************************************** Stretch **************************************************************/
-//Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
+//Take Rock, Paper, Scissors further
+//update your rock papers scissors code below to take a prompt from a user using the window object
