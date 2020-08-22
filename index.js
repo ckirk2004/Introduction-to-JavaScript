@@ -126,6 +126,8 @@ rpsGame(playerChoice);
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function kiloConverter() {}
+
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
 /************************************************************** Task 6 **************************************************************/
