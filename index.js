@@ -1,6 +1,6 @@
 const choices = ['rock', 'paper', 'scissors'];
 let cpuChoice = Math.floor(Math.random() * 3);
-let playerChoice = prompt('Make your move!');
+let playerChoice = prompt('Make your move!').toLowerCase();
 
 if (playerChoice === choices) {
 	playerChoice === playerChoice;
@@ -42,3 +42,4 @@ function rpsGame(playerChoice) {
 rpsGame(playerChoice);
 
 document.getElementById('results').innerHTML = rpsGame(playerChoice);
+document.getElementById('computerPlayed').innerHTML = cpu(cpuChoice);
