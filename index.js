@@ -144,6 +144,15 @@ ftConverter(5);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
+function annoyingSong(startingNumber) {
+	for (let i = startingNumber; i >= 0; i--) {
+		console.log(i);
+		return i - 1;
+	}
+}
+
+annoyingSong(80);
+
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corresponding letter grade
@@ -158,6 +167,12 @@ function gradeCalc(grade) {
 		return console.log('A');
 	} else if (grade >= 80 && grade < 90) {
 		return console.log('B');
+	} else if (grade >= 70 && grade < 80) {
+		return console.log('C');
+	} else if (grade >= 60 && grade < 70) {
+		return console.log('D');
+	} else {
+		console.log('F');
 	}
 }
 
