@@ -126,9 +126,18 @@ rpsGame(playerChoice);
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function kiloConverter() {}
+function kiloConverter(km) {
+	return km * 0.6214;
+}
+
+kiloConverter(5);
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
+
+function ftConverter(ft) {
+	return ft * 30.48;
+}
+ftConverter(5);
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
