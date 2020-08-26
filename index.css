@@ -1,0 +1,25 @@
+header {
+	text-align: center;
+	margin-top: 20vh;
+}
+
+header h1 {
+	font-size: 4rem;
+}
+
+section {
+	margin-top: 8vh;
+	text-align: center;
+}
+
+section p {
+	font-size: 1.5rem;
+}
+
+section h3 {
+	font-size: 2rem;
+}
+
+#computerPlayed {
+	text-transform: capitalize;
+}
